@@ -3,6 +3,8 @@ import "./App.css";
 import Cart from "./components/Cart/Cart";
 import Header from "./components/Layout/Header";
 import Meals from "./components/Meals/Meals";
+import Accordion from "./components/Accordion/Accordion";
+import accordionData from "./components/Data/AccordionData";
 
 function App() {
   const [cartIsShow, setCartIsShown] = useState(false);
@@ -21,6 +23,7 @@ function App() {
       <Header onShowCart={showCartHandler} />
       <main>
         <Meals />
+        <Accordion listItems={accordionData} />
       </main>
     </Fragment>
   );
